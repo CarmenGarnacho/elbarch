@@ -1,0 +1,115 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: #000;  /* Fondo negro */
+    color: #fff;
+    display: flex;
+    height: 100vh;
+  }
+  
+  .site-wrap {
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Configuración del contenedor principal de proyectos */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    flex-grow: 1;
+    background-color: black;
+  }
+  
+  /* Imágenes de los proyectos */
+  .project {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .project img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: opacity 0.3s ease;
+    border: none;  /* Sin bordes redondeados */
+  }
+  
+  .image-container {
+    position: relative;
+  }
+  
+  .project h2 {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 1.5em;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .project:hover img {
+    opacity: 0.3;  /* Efecto de opacidad */
+  }
+  
+  .project:hover h2 {
+    opacity: 1;  /* Muestra el título al hacer hover */
+  }
+  
+  /* Barra lateral derecha */
+  .sidebar {
+    width: 300px;
+    background-color: #000;
+    padding: 20px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .site-header .logo img {
+    width: 100px;
+    margin-bottom: 20px;
+  }
+  
+  .logo-secondary a {
+    color: #fff;
+    font-size: 1.2em;
+    text-decoration: none;
+  }
+  
+  .sidebar-nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar-nav li {
+    margin: 20px 0;
+  }
+  
+  .sidebar-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+  }
+  
+  .sidebar-nav a:hover {
+    color: #0070f3;  /* Color al hacer hover */
+  }
+  
+  .sidebar-nav a.active {
+    color: #0070f3;
+  }
+  
+  
